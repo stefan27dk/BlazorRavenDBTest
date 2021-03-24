@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorRavenDBTest", "BlazorRavenDBTest\BlazorRavenDBTest.csproj", "{7D6FCEDA-8919-4C16-ABBD-1E603BFE38C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{3469701D-1873-4D7F-9FB4-FDC09E09E37C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D6FCEDA-8919-4C16-ABBD-1E603BFE38C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6FCEDA-8919-4C16-ABBD-1E603BFE38C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6FCEDA-8919-4C16-ABBD-1E603BFE38C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6FCEDA-8919-4C16-ABBD-1E603BFE38C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3469701D-1873-4D7F-9FB4-FDC09E09E37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3469701D-1873-4D7F-9FB4-FDC09E09E37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3469701D-1873-4D7F-9FB4-FDC09E09E37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3469701D-1873-4D7F-9FB4-FDC09E09E37C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F18264F-88FA-40FA-A3A9-05E9173C0607}
+	EndGlobalSection
+EndGlobal

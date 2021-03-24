@@ -1,0 +1,46 @@
+﻿@page "/fetchdata"
+
+@using BlazorRavenDBTest.Data
+@inject Application.Services.Employee.EmployeeService employeeService
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (employeeService == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>FName</th>
+                <th>LName</th>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in employees)
+            {
+                <tr>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.LastName</td>
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private ICollection<Application.Models.Employee> employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        employees = await employeeService.GetAll();
+    }
+}

@@ -12,19 +12,33 @@ namespace Application.Services.Employee
     public class EmployeeService
     {
 
-        public Task<ICollection<Application.Models.Employee>> GetAll()
+        // Get ALL
+        public async Task<ICollection<Models.Employee>> GetAll()
         {
+            // Open Session 
             using (IDocumentSession session = DocumentStoreHolder.Store.OpenSession())
             {
-                // return all entities from 'Employees' collection
-                // where FirstName equals 'Robert'
-                ICollection<Application.Models.Employee> employees = session
-                    .Query<Models.Employee>().ToList();
+                // Return all entities from 'Employees' collection
+                ICollection<Models.Employee> employees = session
+                  .Query<Models.Employee>().ToList();
 
-                return Task.FromResult(employees);
+                return await Task.FromResult(employees);
             }
         }
 
+
+
+
+        // GetByID
+        public async Task<Models.Employee> GetByID(string EmployeeID)
+        {
+            using(IDocumentSession session = DocumentStoreHolder.Store.OpenSession())
+            {
+                Models.Employee employee = (Models.Employee)session.Query<Models.Employee>().Where(x => x.Id == EmployeeID);
+
+                return await Task.FromResult(employee);
+            }
+        }
         
     }
 }

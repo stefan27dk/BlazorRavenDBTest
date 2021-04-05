@@ -3,7 +3,7 @@
 @using BlazorRavenDBTest.Data
 @inject Application.Services.Employee.EmployeeService employeeService
 
-<h1>Weather forecast</h1>
+<h1>Employees</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
@@ -16,10 +16,9 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>FName</th>
-                <th>LName</th>
+                <th>FirstName</th>
+                <th>LastName</th>
                 <th>Id</th>
-                <th>Name</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +28,6 @@ else
                     <td>@employee.FirstName</td>
                     <td>@employee.LastName</td>
                     <td>@employee.Id</td>
-                    <td>@employee.Name</td>
                 </tr>
             }
         </tbody>
